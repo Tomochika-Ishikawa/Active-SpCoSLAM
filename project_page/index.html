@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Active-SpCoSLAM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .title {
+            margin-top: 3vh;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .center-align {
+            text-align: center;
+        }
+        
+        .fixed-width {
+            width: 650px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Active Semantic Mapping for Household Robots:<br>Rapid Indoor Adaptation and Reduced User Burden</h1>
+    
+    <p>Tomochika Ishikawa, Akira Taniguchi, Yoshinobu Hagiwara, Tadahiro Taniguchi</p>
+    <a href="https://github.com/Tomochika-Ishikawa/Active-SpCoSLAM">GitHubリポジトリへのリンク</a>
+    <h2 class="fixed-width">Abstract</h2>
+    <p class="center-align fixed-width">Active semantic mapping is essential for service robots to quickly capture both the environment’s map and its spatial meaning, while also minimizing users’ burdens during robot operation and data collection. SpCoSLAM, which is a semantic mapping with place categorization and simultaneous localization and mapping (SLAM), offers the advantage of not being limited to predefined labels, making it well-suited for environmental adaptation. However, SpCoSLAM presents two issues that increase users’ burdens: 1) users struggle to efficiently determine a destination for the robot’s quick adaptation, and 2) providing instructions to the robot becomes repetitive and cumbersome. To address these challenges, we propose ActiveSpCoSLAM, which enables the robot to actively explore uncharted areas while employing CLIP as image captioning to provide a flexible vocabulary that replaces human instructions. The robot determines its actions by calculating information gain integrated from both semantics and SLAM uncertainties.</p>
+    <embed src="research_abstract_smc.pdf" width="800px" height="600px" type="application/pdf">
+    
+    <script src="script.js"></script>
+</body>
+</html>

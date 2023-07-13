@@ -5,3 +5,4 @@ This repository includes the source codes used for the experiments in our paper 
 # Abstract of Active-SpCoSLAM
 We proposed Active-SpCoSLAM, which simultaneously learns spatial concepts and maps based on information gain.
 
+![text](./images/graphical_model.png)

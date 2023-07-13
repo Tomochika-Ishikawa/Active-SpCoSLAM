@@ -13,3 +13,9 @@ The mapping between language and location is then done using an image captioning
 - Python 3.8.10  
 - ROS noetic
 - Image captioning system: [ClipCap](https://github.com/rmokady/CLIP_prefix_caption)
+
+# Execution procedure
+- Please refer to the file '/Active-SpCoSLAM/external_packages.txt' to download gmapping
+- Launch the file 'slam_gmapping/gmapping/launch/slam_gmapping_pr2.launch'
+- Launch the file 'Astar/launch/astar.launch'
+- Execute the python file '/Active-SpCoSLAM/scripts/main.py'

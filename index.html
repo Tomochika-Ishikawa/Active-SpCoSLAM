@@ -72,6 +72,36 @@
         </h2>
       </div>
     </div>
+
+    <div class="col-md-8 col-md-offset-2">
+    <h3>NLMap + SayCan</h3>
+    <p class="text-justify">
+      NLMap can be combined with LLM planners to significantly augment the
+      capability of real robot operation. We connect NLMap with SayCan, a
+      recent work that uses LLM planners to let robots plan and execute
+      according to natural language instructions. NLMap free SayCan from a
+      fixed, hard-coded set of objects, locations, or executable options.
+      SayCan also fails to plan with global context awareness which is
+      addressed by NLMap. With NLMap, SayCan can now perform a great number
+      of previously unachievable tasks.
+      <br />
+    </p>
+    <img src="./figures/nlm_saycan.png" width="100%" />
+    <p class="text-center">
+      <small>
+        <br />
+        As shown in the diagram above, SayCan combines LLM scores and
+        affordance to plan a sequence of steps to accomplish specified by
+        instructions. SayCan relied on a fixed list of object names and
+        locations so would fail on instructions like "Water the plant"
+        beucase plant is not in its pre-defined list. NLMap, on the other
+        hand, actively proposes involved objects, options and query the
+        scene representation for object locations. It, therefore can perform
+        the task "Water the plant".
+      </small>
+    </p>
+  </div>
+  
 <!--     <h1 class="title">Active Semantic Mapping for Household Robots:<br>Rapid Indoor Adaptation and Reduced User Burden</h1> -->
 
     <p>Tomochika Ishikawa, Akira Taniguchi, Yoshinobu Hagiwara, Tadahiro Taniguchi</p>

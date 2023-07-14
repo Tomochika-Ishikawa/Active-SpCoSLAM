@@ -1,6 +1,6 @@
 <!DOCTYPE html>
+<!-- saved from url=(0053)file:///Users/xiafei/Downloads/Inner%20Monologue.html -->
 <html>
-<head>
   <head lang="en">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -63,66 +63,183 @@
 
     <script src="./nl-map_files/app.js"></script>
   </head>
-</head>
-<body>
+
+  <body>
     <div class="container" id="main">
       <div class="row">
         <h2 class="col-md-12 text-center">
-          <br />Active Semantic Mapping for Household Robots:<br>Rapid Indoor Adaptation and Reduced User Burden<br />
+          <br />Open-vocabulary Queryable Scene Representations for Real World
+          Planning<br />
         </h2>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <ul class="list-inline">
+            <br />
 
-    <div class="col-md-8 col-md-offset-2">
-    <h3>NLMap + SayCan</h3>
-    <p class="text-justify">
-      NLMap can be combined with LLM planners to significantly augment the
-      capability of real robot operation. We connect NLMap with SayCan, a
-      recent work that uses LLM planners to let robots plan and execute
-      according to natural language instructions. NLMap free SayCan from a
-      fixed, hard-coded set of objects, locations, or executable options.
-      SayCan also fails to plan with global context awareness which is
-      addressed by NLMap. With NLMap, SayCan can now perform a great number
-      of previously unachievable tasks.
-      <br />
-    </p>
-    <img src="./figures/nlm_saycan.png" width="100%" />
-    <p class="text-center">
-      <small>
-        <br />
-        As shown in the diagram above, SayCan combines LLM scores and
-        affordance to plan a sequence of steps to accomplish specified by
-        instructions. SayCan relied on a fixed list of object names and
-        locations so would fail on instructions like "Water the plant"
-        beucase plant is not in its pre-defined list. NLMap, on the other
-        hand, actively proposes involved objects, options and query the
-        scene representation for object locations. It, therefore can perform
-        the task "Water the plant".
-      </small>
-    </p>
-  </div>
-  
-<!--     <h1 class="title">Active Semantic Mapping for Household Robots:<br>Rapid Indoor Adaptation and Reduced User Burden</h1> -->
+            <li>Boyuan Chen</li>
+            <li>Fei Xia</li>
+            <li>Brian Ichter</li>
+            <li>Kanishka Rao</li>
+            <li>Keerthana Gopalakrishnan</li>
+            <br />
+            <li>Michael S. Ryoo</li>
+            <li>Austin Stone</li>
+            <li>Daniel Kappler</li>
 
-    <p>Tomochika Ishikawa, Akira Taniguchi, Yoshinobu Hagiwara, Tadahiro Taniguchi</p>
-    <a href="https://github.com/Tomochika-Ishikawa/Active-SpCoSLAM">Github</a>
-    <h2 class="fixed-width">Abstract</h2>
-    <p class="center-align fixed-width text-justify">Active semantic mapping is essential for service robots to quickly capture both the environment’s map and its spatial meaning, while also minimizing users’ burdens during robot operation and data collection. SpCoSLAM, which is a semantic mapping with place categorization and simultaneous localization and mapping (SLAM), offers the advantage of not being limited to predefined labels, making it well-suited for environmental adaptation. However, SpCoSLAM presents two issues that increase users’ burdens: 1) users struggle to efficiently determine a destination for the robot’s quick adaptation, and 2) providing instructions to the robot becomes repetitive and cumbersome. To address these challenges, we propose ActiveSpCoSLAM, which enables the robot to actively explore uncharted areas while employing CLIP as image captioning to provide a flexible vocabulary that replaces human instructions. The robot determines its actions by calculating information gain integrated from both semantics and SLAM uncertainties.</p>
-    <img src="./images/graphical_model.png", style="width: 700px; height: auto;">
+            <br /><br />
+            <ul class="list-inline">
+              <li>
+                <a href="https://everydayrobots.com">
+                  <img src="./figures/EverydayRobots2.gif" height="40px" />
+                  Everyday Robots
+                </a>
+              </li>
+              <li>
+                <a href="http://g.co/robotics">
+                  <img src="./figures/robotics-at-google.png" height="40px" />
+                  Robotics at Google</a
+                >
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
 
-    <h2 class="fixed-width">Action determination</h2>
-    <p class="center-align fixed-width">The robot navigates to the position with the maximum information gain (IG) among the candidate points. The IG in Active-SpCoSLAM consists of a weighted sum of three IGs. IGs in Active-SpCoSLAM consist of a weighted sum of three IGs: IGs related to location concepts, IGs related to self-location, and IGs related to maps, respectively.</p>
-    <video src="./images/active_spcoslam_demo_IG.mp4", style="width: 700px; height: auto;" controls></video>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+          <ul class="nav nav-pills nav-justified">
+            <li>
+              <a href="https://arxiv.org/pdf/2209.09874.pdf">
+                <img src="./figures//paper_icon.png" height="60px" />
+                <h4><strong>Paper</strong></h4>
+              </a>
+            </li>
+            <li>
+              <a href="https://youtu.be/Q9CvvArq4ZA">
+                <img src="./figures//youtube_icon.png" height="60px" />
+                <h4><strong>Video</strong></h4>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-    <div class="col-md-8 col-md-offset-2">
-        <h2 class="text-center">Learning spatial conept</h2>
+      <div class="col-md-8 col-md-offset-2">
+        <h3>Abstract</h3>
         <p class="text-justify">
-            First, the robot acquires multiple images of its surroundings with the head camera.
-            Then, the images are input to ClipCap for caption generation, and the images are
-            input to CNN to obtain image features. The robot learns location concepts by
-            categorizing these, plus self-position, into three multimodal pieces of information.<\br>
+          Large language models (LLMs) have unlocked new capabilities of task
+          planning from human instructions. However, prior attempts to apply
+          LLMs to real-world robotic tasks are limited by the lack of grounding
+          in the surrounding scene. In this paper, we develop NLMap, an
+          open-vocabulary and queryable scene representation to address this
+          problem. NLMap serves as a framework to gather and integrate
+          contextual information into LLM planners, allowing them to see and
+          query available objects in the scene before generating a
+          context-conditioned plan. NLMap first establishes a natural language
+          queryable scene representation with Visual Language models (VLMs). An
+          LLM based object proposal module parses instructions and proposes
+          involved objects to query the scene representation for object
+          availability and location. An LLM planner then plans with such
+          information about the scene. NLMap allows robots to operate without a
+          fixed list of objects nor executable options, enabling real robot
+          operation unachievable by previous methods.
         </p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Demo Video</h3>
+          <div class="text-center">
+            <div style="position: relative; padding-top: 56.25%">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Q9CvvArq4ZA"
+                allowfullscreen=""
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-md-offset-2">
+        <h3>NLMap + SayCan</h3>
+        <p class="text-justify">
+          NLMap can be combined with LLM planners to significantly augment the
+          capability of real robot operation. We connect NLMap with SayCan, a
+          recent work that uses LLM planners to let robots plan and execute
+          according to natural language instructions. NLMap free SayCan from a
+          fixed, hard-coded set of objects, locations, or executable options.
+          SayCan also fails to plan with global context awareness which is
+          addressed by NLMap. With NLMap, SayCan can now perform a great number
+          of previously unachievable tasks.
+          <br />
+        </p>
+        <img src="./figures/nlm_saycan.png" width="100%" />
+        <p class="text-center">
+          <small>
+            <br />
+            As shown in the diagram above, SayCan combines LLM scores and
+            affordance to plan a sequence of steps to accomplish specified by
+            instructions. SayCan relied on a fixed list of object names and
+            locations so would fail on instructions like "Water the plant"
+            beucase plant is not in its pre-defined list. NLMap, on the other
+            hand, actively proposes involved objects, options and query the
+            scene representation for object locations. It, therefore can perform
+            the task "Water the plant".
+          </small>
+        </p>
+      </div>
+   
+      <div class="col-md-8 col-md-offset-2">
+        <h3>Method</h3>
+        <p class="text-justify">
+          We first let the robot explore the scene and gather observations. A
+          class-agnostic region proposal network proposes region of interest and
+          encode them into Visual Language Model embeddings. The embeddings and
+          object bounding boxes are aggregated by a multi-view fusion algorithm
+          to create a representation that will be later queried with natural
+          language inputs.
+        </p>
+        <img src="./figures/method_1.png" width="100%" />
+        <p class="text-justify">
+          When human gives an instruction, a large language model parses the
+          instruction into a list of related objects. We then query the scene
+          representation for availability and locations of these objects.
+          Executable options are generated based on what’s found. Finally, the
+          robot plan and accomplishes the task based on the instruction and the
+          found objects.
+        </p>
+        <img src="./figures/method_2.png" width="100%" />
+      </div>
+
+      <div class="col-md-8 col-md-offset-2">
+        <h3>Citation</h3>
+        <div class="form-group col-md-10 col-md-offset-1">
+          <textarea
+            id="bibtex"
+            class="form-control"
+            readonly=""
+            style="display: none"
+          >
+@inproceedings{chen2022nlmapsaycan,
+    title={Open-vocabulary Queryable Scene Representations for Real World Planning},
+    author={Boyuan Chen and Fei Xia and Brian Ichter and Kanishka Rao and Keerthana Gopalakrishnan and Michael S. Ryoo and Austin Stone and Daniel Kappler
+    booktitle={arXiv preprint arXiv:2209.09874},
+    year={2022}
+}</textarea
+          >
+        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
+  </body>
 </html>
+

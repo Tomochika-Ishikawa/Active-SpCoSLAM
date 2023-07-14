@@ -32,28 +32,26 @@
     </style>
 </head>
 <body>
-    <div class="container" id="main">
-        <h1 class="title">Active Semantic Mapping for Household Robots:<br>Rapid Indoor Adaptation and Reduced User Burden</h1>
-    
-        <p>Tomochika Ishikawa, Akira Taniguchi, Yoshinobu Hagiwara, Tadahiro Taniguchi</p>
-        <a href="https://github.com/Tomochika-Ishikawa/Active-SpCoSLAM">Github</a>
-        <h2 class="fixed-width">Abstract</h2>
-        <p class="center-align fixed-width">Active semantic mapping is essential for service robots to quickly capture both the environment’s map and its spatial meaning, while also minimizing users’ burdens during robot operation and data collection. SpCoSLAM, which is a semantic mapping with place categorization and simultaneous localization and mapping (SLAM), offers the advantage of not being limited to predefined labels, making it well-suited for environmental adaptation. However, SpCoSLAM presents two issues that increase users’ burdens: 1) users struggle to efficiently determine a destination for the robot’s quick adaptation, and 2) providing instructions to the robot becomes repetitive and cumbersome. To address these challenges, we propose ActiveSpCoSLAM, which enables the robot to actively explore uncharted areas while employing CLIP as image captioning to provide a flexible vocabulary that replaces human instructions. The robot determines its actions by calculating information gain integrated from both semantics and SLAM uncertainties.</p>
-        <img src="./images/graphical_model.png", style="width: 700px; height: auto;">
-    
-        <h2 class="fixed-width">Action determination</h2>
-        <p class="center-align fixed-width">The robot navigates to the position with the maximum information gain (IG) among the candidate points. The IG in Active-SpCoSLAM consists of a weighted sum of three IGs. IGs in Active-SpCoSLAM consist of a weighted sum of three IGs: IGs related to location concepts, IGs related to self-location, and IGs related to maps, respectively.</p>
-        <video src="./images/active_spcoslam_demo_IG.mp4", style="width: 700px; height: auto;" controls></video>
-    
-        <div class="col-md-8 col-md-offset-2">
-            <h2 class="fixed-width">Learning spatial conept</h2>
-            <p class="text-justify">
-                First, the robot acquires multiple images of its surroundings with the head camera.
-                Then, the images are input to ClipCap for caption generation, and the images are
-                input to CNN to obtain image features. The robot learns location concepts by
-                categorizing these, plus self-position, into three multimodal pieces of information.<\br>
-            </p>
-        </div>
+    <h1 class="title">Active Semantic Mapping for Household Robots:<br>Rapid Indoor Adaptation and Reduced User Burden</h1>
+
+    <p>Tomochika Ishikawa, Akira Taniguchi, Yoshinobu Hagiwara, Tadahiro Taniguchi</p>
+    <a href="https://github.com/Tomochika-Ishikawa/Active-SpCoSLAM">Github</a>
+    <h2 class="fixed-width">Abstract</h2>
+    <p class="center-align fixed-width">Active semantic mapping is essential for service robots to quickly capture both the environment’s map and its spatial meaning, while also minimizing users’ burdens during robot operation and data collection. SpCoSLAM, which is a semantic mapping with place categorization and simultaneous localization and mapping (SLAM), offers the advantage of not being limited to predefined labels, making it well-suited for environmental adaptation. However, SpCoSLAM presents two issues that increase users’ burdens: 1) users struggle to efficiently determine a destination for the robot’s quick adaptation, and 2) providing instructions to the robot becomes repetitive and cumbersome. To address these challenges, we propose ActiveSpCoSLAM, which enables the robot to actively explore uncharted areas while employing CLIP as image captioning to provide a flexible vocabulary that replaces human instructions. The robot determines its actions by calculating information gain integrated from both semantics and SLAM uncertainties.</p>
+    <img src="./images/graphical_model.png", style="width: 700px; height: auto;">
+
+    <h2 class="fixed-width">Action determination</h2>
+    <p class="center-align fixed-width">The robot navigates to the position with the maximum information gain (IG) among the candidate points. The IG in Active-SpCoSLAM consists of a weighted sum of three IGs. IGs in Active-SpCoSLAM consist of a weighted sum of three IGs: IGs related to location concepts, IGs related to self-location, and IGs related to maps, respectively.</p>
+    <video src="./images/active_spcoslam_demo_IG.mp4", style="width: 700px; height: auto;" controls></video>
+
+    <div class="col-md-8 col-md-offset-2">
+        <h2 class="fixed-width">Learning spatial conept</h2>
+        <p class="text-justify">
+            First, the robot acquires multiple images of its surroundings with the head camera.
+            Then, the images are input to ClipCap for caption generation, and the images are
+            input to CNN to obtain image features. The robot learns location concepts by
+            categorizing these, plus self-position, into three multimodal pieces of information.<\br>
+        </p>
     </div>
 <!--         <script src="script.js"></script> -->
 </body>

@@ -44,8 +44,9 @@
     <p class="center-align fixed-width">The robot navigates to the position with the maximum information gain (IG) among the candidate points. The IG in Active-SpCoSLAM consists of a weighted sum of three IGs. IGs in Active-SpCoSLAM consist of a weighted sum of three IGs: IGs related to location concepts, IGs related to self-location, and IGs related to maps, respectively.</p>
     <video src="./images/active_spcoslam_demo_IG.mp4", style="width: 700px; height: auto;" controls></video>
 
-    <h2 class="fixed-width">Learning spatial conept</h2>
-    <p class="text-justify">First, the robot acquires multiple images of its surroundings with the head camera. Then, the images are input to ClipCap for caption generation, and the images are input to CNN to obtain image features. The robot learns location concepts by categorizing these, plus self-position, into three multimodal pieces of information.</p>
+    <div class="col-md-8 col-md-offset-2">
+        <h2 class="fixed-width">Learning spatial conept</h2>
+        <p class="text-justify">First, the robot acquires multiple images of its surroundings with the head camera. Then, the images are input to ClipCap for caption generation, and the images are input to CNN to obtain image features. The robot learns location concepts by categorizing these, plus self-position, into three multimodal pieces of information.</p>
     
     <script src="script.js"></script>
 </body>

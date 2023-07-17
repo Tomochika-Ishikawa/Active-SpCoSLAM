@@ -35,6 +35,25 @@
       width: 600px;
       margin: 0 auto;
     }
+
+    .github-link {
+      display: flex;
+      justify-content: center;
+    }
+
+    .github-link a {
+      margin: 10px;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-container img {
+      width: 600px;
+      height: auto;
+    }
   </style>
 </head>
 <body>
@@ -46,18 +65,24 @@
     </div>
   </div>
 
-  <p class="center-align">Tomochika Ishikawa, Akira Taniguchi, Yoshinobu Hagiwara, Tadahiro Taniguchi</p>
-  <a href="https://github.com/Tomochika-Ishikawa/Active-SpCoSLAM">Github</a>
+  <div class="github-link">
+    <a href="https://github.com/Tomochika-Ishikawa/Active-SpCoSLAM">Github</a>
+  </div>
+  
   <h2 class="fixed-width">Abstract</h2>
   <p class="center-align fixed-width text-justify">
     Active semantic mapping is essential for service robots to quickly capture both the environment’s map and its spatial meaning, while also minimizing users’ burdens during robot operation and data collection. SpCoSLAM, which is a semantic mapping with place categorization and simultaneous localization and mapping (SLAM), offers the advantage of not being limited to predefined labels, making it well-suited for environmental adaptation. However, SpCoSLAM presents two issues that increase users’ burdens: 1) users struggle to efficiently determine a destination for the robot’s quick adaptation, and 2) providing instructions to the robot becomes repetitive and cumbersome. To address these challenges, we propose ActiveSpCoSLAM, which enables the robot to actively explore uncharted areas while employing CLIP as image captioning to provide a flexible vocabulary that replaces human instructions. The robot determines its actions by calculating information gain integrated from both semantics and SLAM uncertainties.
   </p>
-  <img src="./images/graphical_model.png" style="width: 600px; height: auto;">
+
+  <div class="image-container">
+    <img src="./images/graphical_model.png">
+  </div>
 
   <h2 class="fixed-width">Action determination</h2>
   <p class="center-align fixed-width">
     The robot navigates to the position with the maximum information gain (IG) among the candidate points. The IG in Active-SpCoSLAM consists of a weighted sum of three IGs. IGs in Active-SpCoSLAM consist of a weighted sum of three IGs: IGs related to location concepts, IGs related to self-location, and IGs related to maps, respectively.
   </p>
+
   <video src="./images/active_spcoslam_demo_IG.mp4" style="width: 600px; height: auto;" controls></video>
 
   <div class="col-md-8">

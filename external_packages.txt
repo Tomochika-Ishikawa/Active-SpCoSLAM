@@ -1,8 +1,9 @@
-Please download "gmapping" and "A* algorithm" package.
+Please download "gmapping", "A* algorithm" and "small_house_world" package.
 
 $ git clone https://github.com/ros-perception/slam_gmapping.git
 $ git clone https://github.com/ros-perception/openslam_gmapping.git
 $ git clone https://github.com/lh9171338/Astar.git
+$ git clone https://github.com/aws-robotics/aws-robomaker-small-house-world.git
 
 $ catkin_make
 $ source devel/setup.bash

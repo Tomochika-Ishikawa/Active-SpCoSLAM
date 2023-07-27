@@ -15,7 +15,7 @@ The mapping between language and location is then done using an image captioning
 - Image captioning system: [ClipCap](https://github.com/rmokady/CLIP_prefix_caption)
 
 # Execution procedure
-- Please refer to the file `external_packages.txt` to download gmapping and A* algorithm package
+- Please refer to the file `external_packages.txt` to download packages of gmapping, A* algorithm and simulation environment
 - Please refer to the file `/Active-SpCoSLAM/download_weights.txt` to download weights for ClipCap
 - Launch the file `slam_gmapping/gmapping/launch/slam_gmapping_pr2.launch`
 - Launch the file `Astar/launch/astar.launch`

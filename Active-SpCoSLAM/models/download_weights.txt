@@ -1,4 +1,0 @@
-Download the following weights and place this repogitry.
-
-CoCo: https://drive.google.com/file/d/1IdaBtMSvtyzF0ByVaBHtvM0JYSXRExRX/view
-Conceptual Captions: https://drive.google.com/file/d/14pXWwB4Zm82rsDdvbGguLfx9F8aM7ovT/view

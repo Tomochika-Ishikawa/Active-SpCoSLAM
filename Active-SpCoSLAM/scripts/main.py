@@ -135,7 +135,6 @@ class Active_SpCoSLAM():
         self.words_pub = rospy.Publisher("words_pub", visualization_msgs.MarkerArray, queue_size = 1)
         self.path_pub = rospy.Publisher("path_pub", sensor_msgs.PointCloud, queue_size = 1)
         self.obs_pub = rospy.Publisher("observation_pub", visualization_msgs.MarkerArray, queue_size = 1)
-        self.distribution_publisher = rospy.Publisher("/gaussian_distribution/input/add", rgd_msgs.GaussianDistribution, queue_size=1)
         self.path_target_pub = rospy.Publisher('/move_base_simple/goal', geometry_msgs.PoseStamped, queue_size=1)
         self.path_initial_pub = rospy.Publisher('/initialpose', geometry_msgs.PoseWithCovarianceStamped, queue_size=1)
 

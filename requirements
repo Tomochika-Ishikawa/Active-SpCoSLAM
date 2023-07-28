@@ -1,0 +1,9 @@
+Execute following command to install requirements
+
+pip install nltk
+pip install pattern
+pip install transformers==4.27.4
+pip install clip-by-openai
+pip install scikit-image
+pip install numpy==1.21.0
+pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113

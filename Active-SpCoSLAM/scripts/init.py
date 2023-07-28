@@ -10,7 +10,6 @@ import sensor_msgs.msg as sensor_msgs
 import std_msgs.msg as std_msgs
 import move_base_msgs.msg as move_base_msgs
 import visualization_msgs.msg as visualization_msgs
-import rviz_gaussian_distribution_msgs.msg as rgd_msgs
 import actionlib_msgs.msg as actionlib_msgs
 import tf.transformations as transformations
 import actionlib

@@ -16,6 +16,7 @@ The mapping between language and location is then done using an image captioning
 
 # Execution procedure
 - Please refer to the file `external_packages.txt` to download packages of gmapping, A* algorithm and simulation environment
+- Please refer to the file `requirements.txt` to install requirements
 - Please refer to the file `/Active-SpCoSLAM/models/model_for_clipcap/download_weights.txt` to download weights for ClipCap
 - Please refer to the file `/Active-SpCoSLAM/models/model_for_places/download_weights.txt` to download weights for PlacesCNN
 - Launch the file `slam_gmapping/gmapping/launch/slam_gmapping_pr2.launch`

@@ -1,0 +1,13 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+
+
+    ################ start astar node ################
+    <node pkg="astar" type="astar" name="astar" output="screen">
+        <param name="Euclidean" value="true"/>
+        <param name="OccupyThresh" value="0.65"/>
+        <param name="InflateRadius" value="0"/>
+        <param name="rate" value="10"/>
+    </node>
+
+</launch>

@@ -19,6 +19,7 @@ The mapping between language and location is then done using an image captioning
 - Please refer to the file `requirements.txt` to install requirements
 - Please refer to the file `/Active-SpCoSLAM/models/model_for_clipcap/download_weights.txt` to download weights for ClipCap
 - Please refer to the file `/Active-SpCoSLAM/models/model_for_places/download_weights.txt` to download weights for PlacesCNN
+- Please refer to the file `gmapping_replace_code.txt` to modify gmapping package
 - Launch the file `slam_gmapping/gmapping/launch/slam_gmapping_pr2.launch`
 - Launch the file `Astar/launch/astar.launch`
 - Execute the python file `/Active-SpCoSLAM/scripts/main.py`

@@ -1,4 +1,0 @@
-Replace gmapping source code by following procedure
-
-slam_gmapping/gmapping/src/slam_gmapping.cpp -> Active_SpCoSLAM/gmapping_replacement/slam_gmapping.cpp
-slam_gmapping/gmapping/src/slam_gmapping.h -> Active_SpCoSLAM/gmapping_replacement/slam_gmapping.h

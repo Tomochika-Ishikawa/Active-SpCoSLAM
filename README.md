@@ -14,12 +14,15 @@ The mapping between language and location is then done using an image captioning
 - ROS noetic
 - Image captioning system: [ClipCap](https://github.com/rmokady/CLIP_prefix_caption)
 
-# Execution procedure
+# Preparation
 - Please refer to the file `external_packages.txt` to download packages of gmapping, A* algorithm and simulation environment
 - Please refer to the file `requirements.txt` to install requirements
 - Please refer to the file `/Active-SpCoSLAM/models/model_for_clipcap/download_weights.txt` to download weights for ClipCap
 - Please refer to the file `/Active-SpCoSLAM/models/model_for_places/download_weights.txt` to download weights for PlacesCNN
 - Please refer to the file `gmapping_replace_code.txt` to modify gmapping package
+
+# Execution procedure
 - Launch the file `slam_gmapping/gmapping/launch/slam_gmapping_pr2.launch`
+- Launch the file `Active_SpCoSLAM/scripts/pub_global_pose.py`
 - Launch the file `Astar/launch/astar.launch`
 - Execute the python file `/Active-SpCoSLAM/scripts/main.py`

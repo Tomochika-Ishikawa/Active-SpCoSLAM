@@ -56,19 +56,10 @@
       width: 700px;
       height: auto;
     }
-    
-    .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9アスペクト比の場合 */
-    height: 0;
-    overflow: hidden;
-    }
 
     .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 700px;
+        max-width: 700px;
+        width: 100%;
         height: auto;
     }
   </style>

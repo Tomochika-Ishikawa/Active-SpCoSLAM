@@ -56,6 +56,21 @@
       width: 700px;
       height: auto;
     }
+    
+    .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9アスペクト比の場合 */
+    height: 0;
+    overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -66,7 +81,7 @@
       </h2>
     </div>
   </div>
-
+  
   <p class="center-align">Tomochika Ishikawa, <a href="https://scholar.google.com/citations?hl=en&user=jtB7J0AAAAAJ" target=“_blank” rel=“noopener noreferrer”>Akira Taniguchi</a>, <a href="https://scholar.google.com/citations?hl=en&user=Y4qjYvMAAAAJ" target=“_blank” rel=“noopener noreferrer”>Yoshinobu Hagiwara</a>, <a href="https://scholar.google.com/citations?hl=en&user=dPOCLQEAAAAJ" target=“_blank” rel=“noopener noreferrer”>Tadahiro Taniguchi</a></p>
   
   <div class="github-link">
@@ -75,7 +90,9 @@
     <a href="https://drive.google.com/file/d/1BGDmYK7fahyv-2aKla5YY8fmZFaZ5izd/view?usp=sharing" target=“_blank” rel=“noopener noreferrer”>Slide</a>
   </div>
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/n8se-MgPi50?si=otidN_TVdRHKyBkF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/n8se-MgPi50?si=otidN_TVdRHKyBkF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
   
   <h2 class="fixed-width">Abstract</h2>
   <p class="center-align fixed-width text-justify">

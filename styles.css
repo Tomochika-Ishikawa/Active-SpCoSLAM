@@ -1,13 +1,16 @@
 /* 基本スタイル */
-body {
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: Arial, sans-serif;
 }
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* コンテナの内容を上部に寄せる */
     align-items: center;
-    height: 100vh; /* ビューポートの高さに合わせる */
+    min-height: 100vh; /* 最小高さをビューポートの高さに設定 */
     flex-direction: column;
     text-align: center;
 }
@@ -25,7 +28,7 @@ body {
 
 /* ビデオと画像のスタイル */
 video, img {
-    width: 100%; /* コンテナの幅に合わせる */
+    width: 50%; /* 幅を50%に設定 */
     height: auto;
     display: block;
     margin: 10px auto;

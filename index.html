@@ -1,128 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta name="keywords" content="Active-SpCoSLAM">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Active Semantic Mapping for Household Robots">
   <title>Active Semantic Mapping for Household Robots: Rapid Indoor Adaptation and Reduced User Burden</title>
-  <style>
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 70px;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .fixed-width {
-      width: 700px;
-      margin: 10px auto;
-    }
-
-    .center-align {
-      text-align: center;
-    }
-
-    .text-justify {
-      text-align: justify;
-    }
-
-    video {
-      width: 700px;
-      height: auto;
-      display: block;
-      margin: 10px auto;
-    }
-
-    .col-md-8 {
-      width: 700px;
-      margin: 10px auto;
-    }
-
-    .github-link {
-      display: flex;
-      justify-content: center;
-    }
-
-    .github-link a {
-      margin: 10px;
-    }
-
-    .image-container {
-      display: flex;
-      justify-content: center;
-    }
-
-    .image-container img {
-      width: 700px;
-      height: auto;
-    }
-
-    .video-container {
-        margin: 10px;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .video-container iframe {
-        width: 700px;
-        height: 394px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container" id="main">
-    <div class="row">
-      <h2 class="col-md-12">
-        Active Semantic Mapping for Household Robots:<br>Rapid Indoor Adaptation and Reduced User Burden
-      </h2>
+  <main class="container" id="main">
+    <h2>
+      Active Semantic Mapping for Household Robots:<br>Rapid Indoor Adaptation and Reduced User Burden
+    </h2>
+    <p>Tomochika Ishikawa, <a href="https://scholar.google.com/citations?user=jtB7J0AAAAAJ">Akira Taniguchi</a>, <a href="https://scholar.google.com/citations?user=Y4qjYvMAAAAJ">Yoshinobu Hagiwara</a>, <a href="https://scholar.google.com/citations?user=dPOCLQEAAAAJ">Tadahiro Taniguchi</a></p>
+    <div class="links">
+      <a href="https://github.com/Tomochika-Ishikawa/Active-SpCoSLAM">Github</a>
+      <a href="https://drive.google.com/file/d/1dcMnCVrGhY5K7wqlsKBp2Hlh27inBguA/view">Paper</a>
+      <a href="https://drive.google.com/file/d/1BGDmYK7fahyv-2aKla5YY8fmZFaZ5izd/view">Slide</a>
     </div>
-  </div>
-  
-  <p class="center-align">Tomochika Ishikawa, <a href="https://scholar.google.com/citations?hl=en&user=jtB7J0AAAAAJ" target=“_blank” rel=“noopener noreferrer”>Akira Taniguchi</a>, <a href="https://scholar.google.com/citations?hl=en&user=Y4qjYvMAAAAJ" target=“_blank” rel=“noopener noreferrer”>Yoshinobu Hagiwara</a>, <a href="https://scholar.google.com/citations?hl=en&user=dPOCLQEAAAAJ" target=“_blank” rel=“noopener noreferrer”>Tadahiro Taniguchi</a></p>
-  
-  <div class="github-link">
-    <a href="https://github.com/Tomochika-Ishikawa/Active-SpCoSLAM" target=“_blank” rel=“noopener noreferrer”>Github</a>
-    <a href="https://drive.google.com/file/d/1dcMnCVrGhY5K7wqlsKBp2Hlh27inBguA/view?usp=sharing" target=“_blank” rel=“noopener noreferrer”>Paper</a>
-    <a href="https://drive.google.com/file/d/1BGDmYK7fahyv-2aKla5YY8fmZFaZ5izd/view?usp=sharing" target=“_blank” rel=“noopener noreferrer”>Slide</a>
-  </div>
-
-  <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/vv9k_wPkfIs?si=8zLy3EsD6SoPXLBy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
-  
-  <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/n8se-MgPi50?si=B5B60-8XXMO-j2CC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
-  
-  <h2 class="fixed-width">Abstract</h2>
-  <p class="center-align fixed-width text-justify">
-    Active semantic mapping is essential for service robots to quickly capture both the environment’s map and its spatial meaning, while also minimizing users’ burdens during robot operation and data collection. SpCoSLAM, which is a semantic mapping with place categorization and simultaneous localization and mapping (SLAM), offers the advantage of not being limited to predefined labels, making it well-suited for environmental adaptation. However, SpCoSLAM presents two issues that increase users’ burdens: 1) users struggle to efficiently determine a destination for the robot’s quick adaptation, and 2) providing instructions to the robot becomes repetitive and cumbersome. To address these challenges, we propose Active-SpCoSLAM, which enables the robot to actively explore uncharted areas while employing CLIP as image captioning to provide a flexible vocabulary that replaces human instructions. The robot determines its actions by calculating information gain integrated from both semantics and SLAM uncertainties.
-  </p>
-
-  <div class="image-container">
-    <img src="./images/graphical_model.png">
-  </div>
-
-  <h2 class="fixed-width">Action determination</h2>
-  <p class="center-align fixed-width text-justify">
-    The robot navigates to the position with the maximum information gain (IG) among the candidate points. The IG in Active-SpCoSLAM consists of a weighted sum of three IGs. IGs in Active-SpCoSLAM consist of a weighted sum of three IGs: IGs related to spatial concepts, IGs related to self-location, and IGs related to maps, respectively.
-  </p>
-
-  <video src="./images/information_gain_demo.mp4" style="width: 700px; height: auto;" controls></video>
-
-  <div class="col-md-8">
-    <h2 class="text-center">Learning spatial concept</h2>
-    <p class="text-justify">
-      First, the robot acquires multiple images of its surroundings with the head camera. Then, the images are input to ClipCap for caption generation, and the images are input to CNN to obtain image features. The robot learns location concepts by categorizing these, plus self-position, into three multimodal pieces of information.
+    <iframe src="https://www.youtube.com/embed/vv9k_wPkfIs" title="YouTube video player"></iframe>
+    <iframe src="https://www.youtube.com/embed/n8se-MgPi50" title="YouTube video player"></iframe>
+    <h2>Abstract</h2>
+    <p>
+      Active semantic mapping is essential for service robots to quickly capture both the environment’s map and its spatial meaning, while also minimizing users’ burdens during robot operation and data collection. SpCoSLAM, which is a semantic mapping with place categorization and simultaneous localization and mapping (SLAM), offers the advantage of not being limited to predefined labels, making it well-suited for environmental adaptation. However, SpCoSLAM presents two issues that increase users’ burdens: 1) users struggle to efficiently determine a destination for the robot’s quick adaptation, and 2) providing instructions to the robot becomes repetitive and cumbersome. To address these challenges, we propose Active-SpCoSLAM, which enables the robot to actively explore uncharted areas while employing CLIP as image captioning to provide a flexible vocabulary that replaces human instructions. The robot determines its actions by calculating information gain integrated from both semantics and SLAM uncertainties.
     </p>
-  </div>
-  <video src="./images/spatial_concept.mp4" style="width: 700px; height: auto;" controls></video>
-
-  <div class="col-md-8">
-    <h2 class="text-center">Citation</h2>
-    <p class="text-justify">
-      This paper has been accepted to the 2023 IEEE International Conference on Systems, Man, and Cybernetics (SMC), and the BibTeX for the paper is below.
-      <textarea id="bibtex" class="form-control" readonly rows="6" cols="105">
+    <img src="./images/graphical_model.png" alt="Graphical Model of Active-SpCoSLAM">
+    <h2>Action Determination</h2>
+    <p>
+      The robot navigates to the position with the maximum information gain among the candidate points. The IG in Active-SpCoSLAM consists of a weighted sum of three IGs: related to spatial concepts, self-location, and maps, respectively.
+    </p>
+    <video src="./images/information_gain_demo.mp4" controls></video>
+    <section>
+      <h2>Learning Spatial Concept</h2>
+      <p>
+        First, the robot acquires multiple images of its surroundings with the head camera. Then, the images are input to ClipCap for caption generation, and the images are input to CNN to obtain image features. The robot learns location concepts by categorizing these, plus self-position, into three multimodal pieces of information.
+      </p>
+      <video src="./images/spatial_concept.mp4" controls></video>
+    </section>
+    <section>
+      <h2>Citation</h2>
+      <pre>
 @inproceedings{ishikawa2023active,
   title={Active semantic mapping for household robots: rapid indoor adaptation and reduced user burden},
   author={Ishikawa, Tomochika and Taniguchi, Akira and Hagiwara, Yoshinobu and Taniguchi, Tadahiro},
@@ -130,28 +46,24 @@
   pages={3116--3123},
   year={2023},
   organization={IEEE}
-}</textarea>
-    </p>
-  </div>
-
-  <div class="col-md-8">
-    <h2 class="text-center">Other links</h2>
-    <p class="text-justify">
+}
+      </pre>
+    </section>
+    <section>
+      <h2>Other Links</h2>
       <ul>
-        <li><a href="http://www.em.ci.ritsumei.ac.jp/" target=“_blank” rel=“noopener noreferrer”>Laboratory website</a></li>
-        <li><a href="https://drive.google.com/file/d/1Nmsvcai99L2dbKUxW44cP3YmXBx9QMYn/view?usp=sharing" target=“_blank” rel=“noopener noreferrer”>Demo video of this research</a></li>
-        <li><a href="https://www.youtube.com/watch?v=UBgZGRG00eA" target=“_blank” rel=“noopener noreferrer”>Demo video of related research</a></li>
+        <li><a href="http://www.em.ci.ritsumei.ac.jp/">Laboratory website</a></li>
+        <li><a href="https://drive.google.com/file/d/1Nmsvcai99L2dbKUxW44cP3YmXBx9QMYn/view">Demo video of this research</a></li>
+        <li><a href="https://www.youtube.com/watch?v=UBgZGRG00eA">Demo video of related research</a></li>
       </ul>
-    </p>
-  </div>
-
-  <div class="col-md-8">
-    <h2 class="text-center">Acknowledgements</h2>
-    <p class="text-justify">
-      This work was supported by the Japan Science and Technology Agency (JST), Moonshot Research & Development Program (Grant Number JPMJMS2011), and the Japan Society for the Promotion of Science (JSPS), KAKENHI Grant Number JP20K19900, JP23K16975 and JP22K12212.
-    </p>
-  </div>
-  
+    </section>
+    <section>
+      <h2>Acknowledgements</h2>
+      <p>
+        This work was supported by the Japan Science and Technology Agency (JST), Moonshot Research & Development Program (Grant Number JPMJMS2011), and the Japan Society for the Promotion of Science (JSPS), KAKENHI Grant Number JP20K19900, JP23K16975 and JP22K12212.
+      </p>
+    </section>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>

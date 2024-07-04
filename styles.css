@@ -1,0 +1,52 @@
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ビューポートの高さに合わせる */
+    flex-direction: column;
+    text-align: center;
+}
+
+/* リンクのスタイル */
+.links a {
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* ビデオと画像のスタイル */
+video, img {
+    width: 100%; /* コンテナの幅に合わせる */
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* テキストの整形 */
+h2, p {
+    width: 80%; /* 幅を80%に設定 */
+    margin: 10px auto;
+    text-align: justify;
+}
+
+/* セクションスタイル */
+section {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* 特定のセクションのスタイル */
+iframe {
+    width: 100%;
+    height: 400px; /* 高さを指定 */
+    border: none; /* 枠線を消す */
+}

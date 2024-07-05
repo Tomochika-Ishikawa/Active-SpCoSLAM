@@ -50,7 +50,7 @@ section {
 /* 特定のセクションのスタイル */
 iframe {
     width: 50%; /* 幅を50%に設定 */
-    height: 30vh; /* ビューポートの高さの30%に設定 */
+    height: 60vh; /* ビューポートの高さの60%に設定 */
     display: block;
     margin: 10px auto;
 }

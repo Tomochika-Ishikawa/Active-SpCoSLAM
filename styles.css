@@ -35,10 +35,18 @@ video, img {
 }
 
 /* テキストの整形 */
-h2, p {
+/* タイトルと著者名の中央揃え */
+h2, p.authors {
     width: 50%; /* 幅を50%に設定 */
-    margin: 10px auto; /* 上下のマージンを設定し、自動的に左右のマージンを調整 */
+    margin: 10px auto; /* 上下のマージンを10px、左右のマージンを自動で設定 */
     text-align: center; /* テキストを中央揃えにする */
+}
+
+/* 本文の段落の左詰め */
+p {
+    width: 50%; /* 幅を50%に設定 */
+    margin: 10px auto; /* 上下のマージンを10px、左右のマージンを自動で設定 */
+    text-align: left; /* テキストを左詰めにする */
 }
 
 /* セクションスタイル */
@@ -53,4 +61,18 @@ iframe {
     height: 60vh; /* ビューポートの高さの60%に設定 */
     display: block;
     margin: 10px auto;
+}
+
+/* Citationのスタイル */
+section h2:contains('Citation') + pre {
+    width: 80%; /* 幅を80%に設定 */
+    margin: 10px auto; /* 上下のマージンを10px、左右は自動 */
+    text-align: left; /* テキストを左詰めにする */
+}
+
+/* Other Linksの箇条書きスタイル */
+section h2:contains('Other Links') + ul {
+    width: 80%; /* 幅を80%に設定 */
+    margin: 10px auto; /* 上下のマージンを10px、左右は自動 */
+    text-align: left; /* テキストを左詰めにする */
 }

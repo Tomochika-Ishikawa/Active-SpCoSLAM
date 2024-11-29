@@ -6,16 +6,17 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+/* レスポンシブデザイン */
 .container {
     display: flex;
-    justify-content: flex-start; /* コンテナの内容を上部に寄せる */
+    justify-content: flex-start; /* Align content to the top */
     align-items: center;
-    min-height: 100vh; /* 最小高さをビューポートの高さに設定 */
+    min-height: 100vh; /* Minimum height to fit the viewport */
     flex-direction: column;
     text-align: center;
 }
 
-/* リンクのスタイル */
+/* Links styling */
 .links a {
     margin: 10px;
     text-decoration: none;
@@ -26,53 +27,89 @@ body, html {
     text-decoration: underline;
 }
 
-/* ビデオと画像のスタイル */
+/* Video and image styling */
 video, img {
-    width: 50%; /* 幅を50%に設定 */
+    width: 80%; /* Default to 80% for smaller screens */
     height: auto;
     display: block;
     margin: 10px auto;
 }
 
-/* テキストの整形 */
-/* タイトルと著者名の中央揃え */
+@media (min-width: 768px) {
+    video, img {
+        width: 50%; /* Adjust to 50% for larger screens */
+    }
+}
+
+/* Title and authors center alignment */
 h2, p.authors {
-    width: 50%; /* 幅を50%に設定 */
-    margin: 10px auto; /* 上下のマージンを10px、左右のマージンを自動で設定 */
-    text-align: center; /* テキストを中央揃えにする */
+    width: 90%; /* Default to 90% for smaller screens */
+    margin: 10px auto;
+    text-align: center;
 }
 
-/* 本文の段落の左詰め */
+@media (min-width: 768px) {
+    h2, p.authors {
+        width: 50%; /* Adjust to 50% for larger screens */
+    }
+}
+
+/* Paragraph text alignment */
 p {
-    width: 50%; /* 幅を50%に設定 */
-    margin: 10px auto; /* 上下のマージンを10px、左右のマージンを自動で設定 */
-    text-align: left; /* テキストを左詰めにする */
+    width: 90%; /* Default to 90% for smaller screens */
+    margin: 10px auto;
+    text-align: left;
 }
 
-/* セクションスタイル */
+@media (min-width: 768px) {
+    p {
+        width: 50%; /* Adjust to 50% for larger screens */
+    }
+}
+
+/* Section styling */
 section {
     padding: 20px;
     border-top: 1px solid #ccc;
 }
 
-/* 特定のセクションのスタイル */
+/* iFrame styling */
 iframe {
-    width: 50%; /* 幅を50%に設定 */
-    height: 60vh; /* ビューポートの高さの60%に設定 */
+    width: 100%; /* Default to full width */
+    height: 40vh; /* Adjust height for smaller screens */
     display: block;
     margin: 10px auto;
 }
 
-/* Citationのスタイル */
-section h2:contains('Citation') + pre {
-    width: 80%; /* 幅を80%に設定 */
-    margin: 10px auto; /* 上下のマージンを10px、左右は自動 */
-    text-align: left; /* テキストを左詰めにする */
+@media (min-width: 768px) {
+    iframe {
+        width: 50%; /* Adjust to 50% for larger screens */
+        height: 60vh;
+    }
 }
 
-/* Other Linksの箇条書きスタイル */
-section h2:contains('Other Links') + ul {
-    width: 80%; /* 幅を80%に設定 */
-    margin: 10px auto; /* 上下のマージンを10px、左右は自動 */
-    text-align: left; /* テキストを左詰めにする */
+/* Citation styling */
+pre {
+    width: 90%; /* Default to 90% for smaller screens */
+    margin: 10px auto;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    pre {
+        width: 80%; /* Adjust to 80% for larger screens */
+    }
+}
+
+/* Other Links styling */
+ul {
+    width: 90%; /* Default to 90% for smaller screens */
+    margin: 10px auto;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    ul {
+        width: 80%; /* Adjust to 80% for larger screens */
+    }
 }
